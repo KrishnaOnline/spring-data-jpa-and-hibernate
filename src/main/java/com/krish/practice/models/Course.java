@@ -8,6 +8,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -38,4 +39,7 @@ public class Course {
         }
     )
     private List<Author> authors;
+
+    @OneToMany(mappedBy = "course")
+    private List<Section> sections;
 }

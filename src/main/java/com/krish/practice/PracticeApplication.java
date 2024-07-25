@@ -1,7 +1,5 @@
 package com.krish.practice;
 
-import java.time.LocalDateTime;
-
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,19 +14,19 @@ public class PracticeApplication {
 		SpringApplication.run(PracticeApplication.class, args);
 	}
 
-    @Bean
-    public CommandLineRunner commandLineRunner(
-        AuthorRepository authorRepository
-    ) {
-        return args -> {
-            var author = Author.builder()
-                                .firstName("Karan")
-                                .lastName("Sharma")
-                                .email("karan@mail.com")
-                                .age(30)
-                                // .createdAt(LocalDateTime.now())
-                                .build();
-            authorRepository.save(author);
-        };
-    }
+    // @Bean
+    // public CommandLineRunner commandLineRunner(
+    //     AuthorRepository authorRepository
+    // ) {
+    //     return args -> {
+    //         var author = Author.builder()
+    //                             .firstName("Charan")
+    //                             .lastName("Sharma")
+    //                             .email("karan@mail.com")
+    //                             .age(30)
+    //                             // .createdAt(LocalDateTime.now())
+    //                             .build();
+    //         authorRepository.save(author);
+    //     };
+    // }
 }
