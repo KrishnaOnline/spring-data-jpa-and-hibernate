@@ -26,7 +26,7 @@ public class PracticeApplication {
                                 .lastName("Sharma")
                                 .email("karan@mail.com")
                                 .age(30)
-                                .createdAt(LocalDateTime.now())
+                                // .createdAt(LocalDateTime.now())
                                 .build();
             authorRepository.save(author);
         };
